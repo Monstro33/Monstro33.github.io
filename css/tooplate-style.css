@@ -1,15 +1,38 @@
+/*
+
+Template 2097 Pop
+
+http://www.tooplate.com/view/2097-pop
+
+*/
+
 body {
-	
-	/* font-size: 15px;
-	font-weight: bold; */
-    /* position: relative;
-    text-align: left; */
+	/* font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size: 19px;
+	font-weight: 300;
+    color:white;        
+    position: relative; */
 }
 
 h1 {
     font-family: "Monoton", cursive;
     text-transform: uppercase;
     color: #fff;
+    text-shadow:     0 1px 0 hsl(174,5%,80%),
+    0 2px 0 hsl(174,5%,75%),
+    0 3px 0 hsl(174,5%,70%),
+    0 4px 0 hsl(174,5%,66%),
+    0 5px 0 hsl(174,5%,64%),
+    0 6px 0 hsl(174,5%,62%),
+    0 7px 0 hsl(174,5%,61%),
+    0 8px 0 hsl(174,5%,60%),
+
+    0 0 5px rgba(0,0,0,.05),
+   0 1px 3px rgba(0,0,0,.2),
+   0 3px 5px rgba(0,0,0,.2),
+  0 5px 10px rgba(0,0,0,.2),
+ 0 10px 10px rgba(0,0,0,.2),
+ 0 20px 20px rgba(0,0,0,.3);
 }
 
 h2 {
@@ -17,26 +40,27 @@ h2 {
     text-align: center;
     color: black;
     font-weight: bold;
-    font-family: 'Slabo 27px', serif;
+    font-family: "Monoton", cursive;
+}
+
+h5 {
+    font-family: 'Lora', serif;
 }
 
 #tm-bg {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;  
     background-image: url(../img/wave.jpg);
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
     transition: all 0.3s ease;
     text-align: center;
-}
-
-img.tm-bg {
-    filter: grayscale(1);
+	animation: float 6s ease-in-out infinite;
 }
 
 #tm-bg:after {
@@ -63,59 +87,45 @@ p {
     text-align: center;
 }
 
-/* @keyframes float {
-	0% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-	50% {
-		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
-		transform: translatey(-20px);
-	}
-	100% {
-		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
-		transform: translatey(0px);
-	}
-} */
-
 .tm-main-content {
-    display: flex;
+    display: flex;    
     align-items: center;
-    padding: 50px 15px;
+    padding: 50px 15px; 
     position: absolute;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     overflow: auto;
-   
 }
 
 .tm-site-header-col {
     display: flex;
-    justify-content: flex-start;
+    align-items: center;
+    /* transform: translatey(0px);
+	animation: float 7s ease-in-out infinite; */
 }
 
 .tm-site-header {
-    margin: auto;
-    text-align: center;
+    margin: 10px;
+    text-align: right;
     width: 100%;
 }
 
 .tm-nav ul {
     padding-left: 0;
-    display: block;
+    display: block;    
 }
 
-.tm-nav li {
-    list-style: none;
+.tm-nav li { 
+    list-style: none; 
     display: inline-block;
     border: 1px solid white;
     float: left;
     margin: 10px;
 }
 
-.tm-nav-link {
+.tm-nav-link { 
     color: white;
     display: flex;
     flex-direction: column;
@@ -139,42 +149,51 @@ p {
 .fa-3x { font-size: 2.5em; }
 
 .fa-user:hover {
-color: black;
-}
+    color: black;
+    }
 
 .product {
-    /* border: 10px solid;
-    border-radius: 50px;  */
-    /* border-top-color: rgba(#FFF,  .1);
-    border-right-color: rgba(#FFF, .2);
-    border-bottom-color: rgba(#FFF, .3);
-    border-left-color: rgba(#FFF, .2);
-    transition: 1s; */
+    background: transparent;
+    transition: all 0.3s ease;
     cursor: pointer;
-    background: transparent; 
-    transition: all 0.3s ease; 
 }
 
 .product:hover, .product.active {
-    background: #FFF;
+    background: black;
     color: #a9a9a9;
     box-shadow: 0 0 80px 10px #BFBFBF;
     border-radius: 50px;
 }
 
-.tm-nav-icon {
+.tm-nav-icon {    
     display: block;
     margin-bottom: 25px;
 }
 
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+} 
+
 /* Expanding Grid Items from Codrops */
 .tm-page-title { font-weight: 300; }
-.content { max-width: 450px; }
+.content { max-width: 370px; 
+    perspective: 1000px;
+}
 .grid {
     display: flex;
     flex-wrap: wrap;
-    transform: translatey(0px);
-	animation: float 6s ease-in-out infinite;
+    perspective: 1000px;
 }
 .grid__item { margin: 10px; }
 .product {
@@ -202,90 +221,84 @@ color: black;
     display: none;
 }
 
-.carousel-wrapper {
+*, *::before, *::after {
+    box-sizing: border-box; /* Too much math below to be concerned with standard CSS Box Model element dimensions calculations. Let's not have to account for padding/margins/borders on anything here. */
+  }
+  
+  .carousel_wrapper {
     position: relative;
     width: 320px;
-    margin: 100px auto 0 auto;
+    height: 200px;
+    margin: 150px auto 0 auto;
     perspective: 1000px;
-    }
-    
-    .carousel {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        transform-style: preserve-3d;
-        transform: rotateY(-360deg) translateZ(-412px); /* add reverse transformation from the slides */
-        animation: swirl 40s steps(10000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
-      }
-    
-    .slide {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 300px;
-        height: 187px;
-    }
-    
-    .slide img {
-        width: 280px;
-        height: 175px;
-        border: 3px inset rgb(251, 251, 252);
+  }
   
-        box-shadow: 0 0 15px 3px rgb(251, 251, 252); 
-        background: #FFF;
-        color: #a9a9a9;
-        box-shadow: 0 0 80px 10px #BFBFBF;
-    }
-    
-      .slide-one {
-        transform: rotateY(0deg) translateZ(412px);
-      }
-      .slide-two {
-        transform: rotateY(40deg) translateZ(412px);
-      }
-      .slide-three {
-        transform: rotateY(80deg) translateZ(412px);
-      }
-      .slide-four {
-        transform: rotateY(120deg) translateZ(412px);
-      }
-      .slide-five {
-        transform: rotateY(160deg) translateZ(412px);
-      }
-      .slide-six {
-        transform: rotateY(200deg) translateZ(412px);
-      }
-      .slide-seven {
-       transform: rotateY(240deg) translateZ(412px);
-   }
-    .slide-eight {
-        transform: rotateY(280deg) translateZ(412px);
-      }
-    .slide-nine {
-        transform: rotateY(320deg) translateZ(412px);
-    }
-
-
- /*
-  CSS3 ANIMATION
-  -------------------
-  rotates the carousel around the Y axis by using rotateY and starting at initial value, -360º, and going to final value 0º, then resetting.
-  */
+  .carousel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transform: rotateY(-360deg) translateZ(-412px); /* add reverse transformation from the slides */
+    animation: swirl 40s steps(10000, end) infinite; /* run `swirl` animation (defined at end of CSS) infitely, with animation lasting 40 seconds, and 10,000 steps between the FROM and TO values in the animation for a smooth rotation */
+  }
   
-
-@keyframes swirl {   
+  .slide {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 300px;
+    height: 187px;
+  }
+  
+  .slide img {
+    width: 280px;
+    height: 175px;
+    object-fit: contain;
+    border: 3px inset rgba(47, 115, 201, 0.75);
+    box-shadow: 0 0 15px 3px rgba(110, 72, 221, 0.9);
+  }
+  
+  .slide.one {
+    transform: rotateY(0deg) translateZ(412px);
+  }
+  .slide.two {
+    transform: rotateY(40deg) translateZ(412px);
+  }
+  .slide.three {
+    transform: rotateY(80deg) translateZ(412px);
+  }
+  .slide.four {
+    transform: rotateY(120deg) translateZ(412px);
+  }
+  .slide.five {
+    transform: rotateY(160deg) translateZ(412px);
+  }
+  .slide.six {
+    transform: rotateY(200deg) translateZ(412px);
+  }
+  .slide.seven {
+    transform: rotateY(240deg) translateZ(412px);
+  }
+  .slide.eight {
+    transform: rotateY(280deg) translateZ(412px);
+  }
+  .slide.nine {
+    transform: rotateY(320deg) translateZ(412px);
+  }
+ 
+  @keyframes swirl {   
     from {
       transform: rotateY(-360deg);
     }
     to {
       transform: rotateY(0deg);
     }
-  }     
- 
+  } 
+
 .tm-fa-close { font-size: 30px; }
 
 .details {
-    font-size: 3rem;
+    font-size: 1rem;    
     width: 100%;
     height: 100%;
     bottom: 0;
@@ -295,8 +308,8 @@ color: black;
     flex-direction: column;
     justify-content: center;
     pointer-events: none;
-    padding: 15px;
-    display: none;
+    padding: 15px;   
+    display: none; 
 }
 
 .details > * {
@@ -314,7 +327,6 @@ color: black;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    font-weight: bold;
 }
 
 .details__bg--down {background-image: url(../img/papers.co-ms19-beach-wave-coast-nature-sea-water-summer-white-29-wallpaper\ \(1\).jpg); }
@@ -323,18 +335,6 @@ color: black;
     padding: 50px;
     transform-origin: 0 0;
 }
-
-.img-fluid {
-    border-radius: 50px;
-    -webkit-filter:sepia(0.2) brightness(1.1) contrast(1.3);
-  transition:-webkit-filter 0.3s ease-in-out;
-    position:relative; 
-    z-index:-1;
-}
-
-.img-fluid:hover { background:none; }
-
-.img-fluid:hover img { -webkit-filter:sepia(0) brightness(1) contrast(1); }
 
 .details__close {
     position: absolute;
@@ -349,6 +349,15 @@ color: black;
     z-index: 1001;
 }
 
+.img-fluid {
+    border-radius: 50px;
+    -webkit-filter:sepia(0.2) brightness(1.1) contrast(1.3);
+  transition:-webkit-filter 0.3s ease-in-out;
+    position:relative; 
+    z-index:-1;
+}
+
+/* .img-fluid:hover img { -webkit-filter:sepia(0) brightness(1) contrast(1); } */
 
 .tm-reverse-sm { flex-direction: row; }
 
@@ -375,16 +384,10 @@ color: black;
 
 .slick-dots li.slick-active button:before {
     opacity: .75;
-    color: black;
+    color:black;
 }
 
-#devicon-git-plain {
-    max-width: 5em;
-    color: black;
-    font-size: 2rem;
-  }
 
-/* Contact */
 .form-control {
     font-size: 1.1rem;
     border-radius: 0;
@@ -402,7 +405,7 @@ color: black;
 
 .tm-col-email { padding-left: 0; }
 
-.tm-btn-submit { background-color: black; }
+.tm-btn-submit { background-color: #006599; }
 
 .tm-btn-gray {
     background-color: black;
@@ -427,29 +430,111 @@ color: black;
     border-color: transparent;
 }
 
-/* Footer */
 footer {
     position: absolute;
-    bottom: 30px;
+    bottom: 30px;    
     text-align: center;
     left: 0;
-    right: 0;
+    right: 0;   
 }
 
 .tm-text-highlight { color: black; }
 .tm-text-highlight:hover { color: black; }
-.tm-main-content.tm-footer-relative { flex-direction: column; }
+.tm-main-content.tm-footer-relative { flex-direction: column; } 
 .tm-main-content.tm-footer-relative footer {
     position: relative;
     bottom: 0;
     margin-top: 50px;
 }
 
+  ul.redesSociais {
+    padding-left: 0;
+    width: 620px;
+    height: 100px;
+    position: relative;
+    left: 50%;
+    margin-top: 50px;
+    margin-left: -310px;
+    margin-bottom: 50px;
+    cursor: pointer;
+  }
+  
+  ul.redesSociais li {
+    list-style-position: inside;
+    display: block;
+    position: absolute;
+    right: 50%;
+    transition: all 500ms;
+  }
+  
+  /*Sem Mouse*/
+  ul.redesSociais li.pinterest {
+    transform: scale(0.5);
+    margin-right: -10px;
+    z-index:0;
+  }
+  ul.redesSociais li.facebook {
+    transform: scale(0.5);
+    margin-right: -30px;
+    z-index:1;
+  }
+  ul.redesSociais li.twitter {
+    transform: scale(0.5);
+    margin-right: -50px;
+    z-index:2;
+  }
+  ul.redesSociais li.googleplus {
+    transform: scale(0.5);
+    margin-right: -70px;
+    z-index:3;
+  }
+  ul.redesSociais li.skype {
+    transform: scale(0.5);
+    margin-right: -90px;
+    z-index:2;
+  }
+
+ul.redesSociais li.linked-in {
+  transform: scale(0.5);
+  margin-right: -110px;
+  z-index:1;
+}
+
+ul.redesSociais li.instagram {
+    transform: scale(0.5);
+    margin-right: -130px;
+    z-index:0;
+  }
+  
+  ul.redesSociais:hover li.pinterest {
+    margin-right: 410px;
+  }
+  ul.redesSociais:hover li.facebook {
+    margin-right: 270px;
+  }
+  ul.redesSociais:hover li.twitter {
+    margin-right: 170px;
+  }
+  ul.redesSociais:hover li.googleplus {
+    margin-right: 10px;
+  }
+  ul.redesSociais:hover li.skype {
+     margin-right: -70px;
+  }
+
+  ul.redesSociais:hover li.linked-in {
+    margin-right: -190px;
+ }
+  
+ ul.redesSociais:hover li.instagram {
+    margin-right: -410px;
+ }
+
 .tm-copyright-text {
-    background-color: transparent;
+    /* background-color: transparent; */
     display: inline-block;
     padding: 10px 30px;
-    color: white
+    color: white;
 }
 
 a, button { transition: all 0.3s ease; }
@@ -488,7 +573,7 @@ p:last-child { margin-bottom: 0; }
     .tm-reverse-sm { flex-direction: column-reverse; }
 }
 
-@media (max-width: 544px) {
+@media (max-width: 544px) {    
     .tm-main-content { flex-direction: column; }
     .details__bg { padding: 55px 40px; }
     .slick-dots li button:before { font-size: 15px; }
