@@ -1,9 +1,4 @@
 {
-	// document.querySelectorAll('.product').forEach (el) =>
-  
-	// el.addEventListener 'click', =>
-	//   el.classList.toggle '.active'
-
 	class Details {
 		constructor() {
 			this.DOM = {};
@@ -18,10 +13,10 @@
 			this.DOM.details = document.createElement('div');
 			this.DOM.details.className = 'details';
 			this.DOM.details.innerHTML = detailsTmpl;
+			// DOM.content.appendChild(this.DOM.details);
 			document.getElementById('tm-wrap').appendChild(this.DOM.details);
 			this.init();
 		}
-
 		init() {
 			this.DOM.bgDown = this.DOM.details.querySelector('.details__bg--down');
 			this.DOM.description = this.DOM.details.querySelector('.details__description');
