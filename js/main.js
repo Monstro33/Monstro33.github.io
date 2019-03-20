@@ -207,7 +207,7 @@
 			});
 		}
 	}; // class Item
-
+ 
 	const DOM = {};
 	DOM.grid = document.querySelector('.grid');
 	DOM.content = DOM.grid.parentNode;
